@@ -1,1 +1,5 @@
-.DS_Store
+# Ignore API keys
+api_keys.json
+secrets.json
+config.json
+# Add more files or directories as needed
