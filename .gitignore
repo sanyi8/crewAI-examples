@@ -2,4 +2,14 @@
 api_keys.json
 secrets.json
 config.json
-# Add more files or directories as needed
+api_keys/
+secrets/
+config/
+
+# Ignore .env file
+.env
+
+# Ignore other sensitive files
+credentials.json
+passwords.txt
+access_tokens.txt
