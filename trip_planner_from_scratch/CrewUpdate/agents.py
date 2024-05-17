@@ -1,4 +1,6 @@
 from crewai import Agent
+from tools.search_tools import SearchTools
+
 
 class AINewsLetterAgent():
     def editor_agent(self):
@@ -25,7 +27,7 @@ class AINewsLetterAgent():
         return Agent(
             role='NewsAnalyzer',
             goal='Analyze each news story and generate a detailed markdown summary',
-            backstory="""With a critical eye and a knack for distilling complex information, you analyses of AI news stories, making them accessible and engaging for our audience.""",
+            backstory="""With a critical eye and a knack for distilling complex information, you analyze AI news stories, making them accessible and engaging for our audience. Your expertise in AI and technology ensures that our readers stay informed and up-to-date""",
             tools=[SearchTools.search_internet],
             verbose=True,
             allow_delegation=True,
@@ -35,8 +37,7 @@ class AINewsLetterAgent():
         return Agent(
             role='NewsletterCompiler',
             goal='Compile the analyzed news stories into a final newsletter format',
-            backstory="""As the final architect of the newsletter, you meticulously arrange ?? ensuring a coherent and cisually appealing presentation that captivate our reader ??? newsletter format guidelines and maintain consistency throughout.""",
-            tools=[SearchTools.search_internet],
-            verbose=True,            a
+            backstory="""As the final architect of the newsletter, you meticulously arrange the analyzed news stories ensuring a coherent and visually appealing presentation that captivates our readers. You ensure that the newsletter adheres to our publication's guidelines and maintains consistency throughout.""",
+            verbose=True,            
         )
 

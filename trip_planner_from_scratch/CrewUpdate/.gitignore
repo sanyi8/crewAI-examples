@@ -1,0 +1,15 @@
+# Ignore API keys
+api_keys.json
+secrets.json
+config.json
+api_keys/
+secrets/
+config/
+
+# Ignore .env file
+.env
+
+# Ignore other sensitive files
+credentials.json
+passwords.txt
+access_tokens.txt
